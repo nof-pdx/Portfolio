@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css" >
+	<script src="script.js"></script>
+
+	<title>widescreen ui</title>
+</head>
+<body onload="fillGUI()">
+	<div class="ui">
+		<div class="left-view">
+			<div class="artifact-panel-title title-text">
+				<b>CATALOGED ARTIFACTS</b>
+			</div>
+			<div class="artifact-panel" id="artifact-panel">
+			</div>
+		</div>
+		<div class="center-view">
+			<div class="main-view" id="main-view">
+			</div>
+			<div class="bottom-center-view">
+				<div class="log-panel">
+					<div class="log-panel-title">
+						<p class="nav-panel-title-text">
+							EVENTS LOG
+						</p>
+					</div>
+					<div class="log-panel-view" id="log-panel">
+					</div>
+				</div>
+				<div class="nav-panel">
+					<div class="nav-panel-data">
+						<div class="current-pos">
+							<p class="nav-panel-text">
+								CURRENT CP: (12, 12)
+							</p>
+						</div>
+						<div class="target-pos">
+							<p class="nav-panel-text">
+								TARGET CP: (12, 18)
+							</p>
+						</div>
+					</div>
+					<div class="nav-select">
+						<div class="nav-select-row">
+							<div class="nav-select-tile-row">
+							</div>
+							<div class="nav-select-tile-row">
+								<!-- <button class="nav-button nav-button-120">120</button> -->
+								<input type="radio" name="direction-select" value="120" id="nav-button-120" />
+								<label class="nav-button-120" for="nav-button-120">120</label>
+							</div>
+							<div class="nav-select-tile-row">
+								<!-- <button class="nav-button nav-button-90">90</button> -->
+								<input type="radio" name="direction-select" value="90" id="nav-button-90" checked="true" />
+								<label class="nav-button-90" for="nav-button-90">90</label>
+							</div>
+							<div class="nav-select-tile-row">
+								<!-- <button class="nav-button nav-button-60">60</button> -->
+								<input type="radio" name="direction-select" value="60" id="nav-button-60" />
+								<label class="nav-button-60" for="nav-button-60">60</label>
+							</div>
+							<div class="nav-select-tile-row">
+							</div>
+						</div>
+						<div class="nav-select-col">
+							<div class="nav-select-tile-col">
+								<!-- <button class="nav-button nav-button-150">150</button> -->
+								<input type="radio" name="direction-select" value="150" id="nav-button-150" />
+								<label class="nav-button-150" for="nav-button-150">150</label>
+							</div>
+							<div class="nav-select-tile-col">
+								<!-- <button class="nav-button nav-button-180">180</button> -->
+								<input type="radio" name="direction-select" value="180" id="nav-button-180" />
+								<label class="nav-button-180" for="nav-button-180">180</label>
+							</div>
+							<div class="nav-select-tile-col">
+								<!-- <button class="nav-button nav-button-210">210</button> -->
+								<input type="radio" name="direction-select" value="210" id="nav-button-210" />
+								<label class="nav-button-210" for="nav-button-210">210</label>
+							</div>
+						</div>
+						<div class="nav-select-center">
+							<button class="jump-button" id="jump-button">JUMP</button>
+						</div>
+						<div class="nav-select-col">
+							<div class="nav-select-tile-col">
+								<!-- <button class="nav-button nav-button-30">30</button> -->
+								<input type="radio" name="direction-select" value="30" id="nav-button-30" />
+								<label class="nav-button-30" for="nav-button-30">30</label>
+							</div>
+							<div class="nav-select-tile-col">
+								<!-- <button class="nav-button nav-button-0">0</button> -->
+								<input type="radio" name="direction-select" value="0" id="nav-button-0" />
+								<label class="nav-button-0" for="nav-button-0">0</label>
+							</div>
+							<div class="nav-select-tile-col">
+								<!-- <button class="nav-button nav-button-330">330</button> -->
+								<input type="radio" name="direction-select" value="330" id="nav-button-330" />
+								<label class="nav-button-330" for="nav-button-330">330</label>
+							</div>
+						</div>
+						<div class="nav-select-row">
+							<div class="nav-select-tile-row">
+							</div>
+							<div class="nav-select-tile-row">
+								<!-- <button class="nav-button nav-button-240">240</button> -->
+								<input type="radio" name="direction-select" value="240" id="nav-button-240" />
+								<label class="nav-button-240" for="nav-button-240">240</label>
+							</div>
+							<div class="nav-select-tile-row">
+								<!-- <button class="nav-button nav-button-270">270</button> -->
+								<input type="radio" name="direction-select" value="270" id="nav-button-270" />
+								<label class="nav-button-270" for="nav-button-270">270</label>
+							</div>
+							<div class="nav-select-tile-row">
+								<!-- <button class="nav-button nav-button-300">300</button> -->
+								<input type="radio" name="direction-select" value="300" id="nav-button-300" />
+								<label class="nav-button-300" for="nav-button-300">300</label>
+							</div>
+							<div class="nav-select-tile-row">
+							</div>
+						</div>
+					</div>
+					<div class="dist-select">
+						<div class="cp-select-wrapper">
+							<select class="cp-select" id="cp-select">
+								<option value="cp_1">1cp</option>
+								<option value="cp_2">2cp</option>
+								<option value="cp_3">3cp</option>
+								<option value="cp_4">4cp</option>
+								<option value="cp_5">5cp</option>
+								<option value="cp_6">6cp</option>
+								<option value="cp_7">7cp</option>
+								<option value="cp_8">8cp</option>
+								<option value="cp_9">9cp</option>
+								<option value="cp_10">10cp</option>
+							</select>
+						</div>
+						<div class="scan-button-wrapper">
+							<button class="fill-button">SCAN</button>
+						</div>
+						<div class="action-button-wrapper">
+							<button class="fill-button">ACTION</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right-view">
+			<div class="inventory-panel">
+				<div class="inv-row">
+					<div class="inv-text-wrapper">
+						<p class="inv-text">Supplies:</p>
+					</div>
+					<div class="supplies-wrapper">
+						<p class="inv-text">100%</p>
+					</div>
+				</div>
+				<div class="inv-row">
+					<div class="inv-text-wrapper">
+						<p class="inv-text">Energy:</p>
+					</div>
+					<div class="energy-wrapper">
+						<p class="inv-text">1000</p>
+					</div>
+				</div>
+				<div class="inv-row">
+					<div class="inv-text-wrapper">
+						<p class="inv-text">Credits:</p>
+					</div>
+					<div class="credits-wrapper">
+						<p class="inv-text">1000</p>
+					</div>
+				</div>
+			</div>
+			<div class="upgrades-panel-title title-text">
+				PURCHASED UPGRADES
+			</div>
+			<div class="upgrades-panel" id="upgrade-panel">
+			</div>
+			<div class="config-panel-title title-text">
+				GAME CONFIGURATION
+			</div>
+			<div class="config-panel">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

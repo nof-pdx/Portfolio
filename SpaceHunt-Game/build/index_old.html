@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style_old.css">
+  <script type="text/javascript" defer src="js/map.js"></script>
+	<script type="text/javascript" src="js/Funderburgh.js"></script>
+  <script type="text/javascript" src="js/player.js"></script>
+
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" href="jquery-ui.css" type="text/css" media="all" />
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <title>SPACEHUNT</title>
+</head>
+<body>
+    <div class="page">
+        <div class="top-view">
+            <div class="left-panel" id="left-panel">
+            </div>
+            <div class="nav-panel">
+                <div class="tile-row">
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                </div>
+                <div class="tile-row">
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                </div>
+                <div class="tile-row">
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile"></div>
+                    <div class="tile">
+                        <img src="img/64_planet.png" title="planet" />
+                    </div>
+                    <div class="tile"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                </div>
+                <div class="tile-row">
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                </div>
+                <div class="tile-row">
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile">
+                        <img id="ship" src="img/64_ship.png" title="ship" />
+                    </div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                </div>
+                <div class="tile-row">
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                </div>
+                <div class="tile-row">
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                </div>
+                <div class="tile-row">
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                </div>
+                <div class="tile-row">
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                    <div class="tile-hidden"></div>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div class="inventory-panel">
+                    <div class="inv-row">
+                        <!-- <label class="inv-label" for="fuel-text">Fuel:</label>
+                        <input class="inv-out" type="text" id="fuel-text" name="fuel-text" value="100%" readonly> -->
+                    </div>
+					<div class="inv-row">
+                        <label class="inv-label" for="supplies-text">Supplies:</label>
+                        <input class="inv-out" type="text" id="supplies-text" name="supplies-text" value="100%" readonly>
+                    </div>					
+                    <div class="inv-row">
+                        <label class="inv-label" for="energy-text">Energy:</label>
+                        <input class="inv-out" type="text" id="energy-text" name="energy-text" value="1000" readonly>
+                    </div>
+                    <div class="inv-row">
+                        <label class="inv-label" for="credits-text">Credits:</label>
+                        <input class="inv-out" type="text" id="credits-text" name="credits-text" value="1000" readonly>
+                    </div>
+                </div>
+                <div class="upgrade-panel">
+                    <div class="div-fill-width">
+                        <p>PURCHASED UPGRADES</p>
+                    </div>
+                    <div class="div-fill-width">
+                        <p>Advanced Scanner</p>
+                    </div>
+                    <div class="div-fill-width">
+                        <p>Improved Propulsion 2</p>
+                    </div>
+                    <div class="div-fill-width">
+                        <p>Improved Energy</p>
+                    </div>
+                    <div class="div-fill-width">
+                        <p>Increased Hull</p>
+                    </div>
+                    <div class="div-fill-width">
+                        <p>Fuzzy Dice</p>
+                    </div>
+                </div>
+				<div class="coordinates-panel">
+					<div class="inv-row">
+                        <label class="inv-label" for="current-coordinate-text">Current Coordinate:</label>
+                        <input class="inv-out" type="text" id="current-coordinate-text" name="current-coordinate-text" value="(12,12)" readonly>
+                    </div>					
+                    <div class="inv-row">
+                        <label class="inv-label" for="target-coordinate-text">Target Coordinate:</label>
+                        <input class="inv-out" type="text" id="target-coordinate-text" name="target-coordinate-text" value="(12,12)" readonly>
+                    </div>
+				</div>
+            </div>
+        </div>
+        <div class="bottom-view">
+            <div class="event-panel">
+                <div class="event-message">
+                    Welcome aboard commander
+                </div>
+                <div class="event-message">
+                    Scan discovered 3 objects: planet, freighter, asteroid
+                </div>
+                <div class="event-message">
+                    upgrade: fuzzy dice purchased for 50 credits
+                </div>
+                <div class="event-message">
+                    fuel and energy fully restored
+                </div>
+                <div class="event-message">
+                    WARNING: SHIP DAMAGE CRITICAL
+                </div>
+                <div class="event-message">
+                    WARNING: ENERGY IS RUNNING LOW
+                </div>
+                <div class="event-message">
+                    Now jumping to coordinates (20, 45)
+                </div>
+                <div class="event-message">
+                    Now entering planet atmosphere
+                </div>
+                <div class="event-message">
+                    You avoided an attempted pirate raid
+                </div>
+                <div class="event-message">
+                    There is no cow level
+                </div>
+            </div>
+            <div class="control-panel">
+                <div class="action-btns">
+                    <div class="action-btn-top">
+                        <button class="fill-btn">SCAN</button>
+                    </div>
+                    <div class="action-btn-bottom">
+                        <button class="fill-btn">ACTION</button>
+                    </div>
+                </div>
+                <div class="nav-btns">
+                    <div class="nav-btn-row">
+                        <div class="nav">
+                        </div>
+                        <div class="nav">
+                            <button class="fill-btn" value="click" onclick="Up()">90</button>
+                        </div>
+                        <div class="nav">
+                        </div>
+                    </div>
+                    <div class="nav-btn-row">
+                        <div class="nav">
+                            <button class="fill-btn" value="click" onclick="Left()">180</button>
+                        </div>
+                        <div class="nav">
+                        </div>
+                        <div class="nav">
+                            <button class="fill-btn" value="click" onclick="Right()">0</button>
+                        </div>
+                    </div>
+                    <div class="nav-btn-row">
+                        <div class="nav">
+                        </div>
+                        <div class="nav">
+                            <button class="fill-btn"  value="click" onclick="Down()">270</button>
+                        </div>
+                        <div class="nav">
+                        </div>
+                    </div>
+                </div>
+                <div class="dist-select">
+                    <select class="cp-select" id="cp-select">
+                        <option value="1">1cp</option>
+                        <option value="2">2cp</option>
+                        <option value="3">3cp</option>
+                        <option value="4">4cp</option>
+                        <option value="5">5cp</option>
+                        <option value="6">6cp</option>
+                        <option value="7">7cp</option>
+                        <option value="8">8cp</option>
+                        <option value="9">9cp</option>
+                        <option value="10">10cp</option>
+                    </select>
+                </div>
+                <div class="jump-btn" >
+                    <button class="fill-btn" value="click" id="jump-btn" onclick="clickedJumpBtn()">BEGIN JUMP</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="configuration-view">
+            <div class="configuration-panel">
+                <div class="configuration-message">
+                  Game Configuration:
+                </div>
+                <br>
+									<label class="config-label" for="start-location">Move ship to location:</label>
+									<input class="config-out" type="text" id="start-location" name="start-location" value="4,4">
+                <br>
+                <br>
+									<label class="config-label" for="energy">Energy:</label>
+									<input class="config-out" type="text" id="energy" name="energy" value="1000">
+                <br>
+                <br>
+									<label class="config-label" for="supplies">Supplies:</label>
+									<input class="config-out" type="text" id="supplies" name="supplies" value="100%">
+                <br>
+                <br>
+									<label class="config-label" for="credits">Credits:</label>
+									<input class="config-out" type="text" id="credits" name="credits" value="1000">
+                <br>
+                <br>
+									<label class="config-label" for="wormhole-behaviour">Wormhole behaviour:</label>
+									<input class="config-out" type="radio" id="wormhole-behaviour-random" name="wormhole-behaviour" value="random" checked>
+									<label for="wormhole-behaviour-random">random</label>
+									<input class="config-out" type="radio" id="wormhole-behaviour-specific" name="wormhole-behaviour" value="specific">
+									<label for="wormhole-behaviour-specific">specific</label>
+									<input class="config-out" type="text" id="wormhole-behaviour" name="wormhole-behaviour" value="2,4">
+                <br>
+                <br>
+									<label class="config-label" for="playmode">Playmode:</label>
+										<select id="playmode" value="playmode">
+											<option value="regular-play">regular play</option>
+											<option value="never-die">never die</option>
+											<label for="playmode"></label>
+										</select>
+                <br>
+                <br>
+									<label class="config-label" for="max-game-size">MAX game size:</label>
+									<input class="config-out" type="text" id="max-game-size" name="max-game-size" value="8">
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/natalie.js"></script>
+</body>
+</html>

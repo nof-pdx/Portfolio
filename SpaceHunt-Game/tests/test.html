@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="qunit-2.15.0.css">
+<script type="text/javascript" src="add.js"></script>
+<script type="text/javascript" src="../build/script.js"></script>
+<script type="text/javascript" src="../build/js/player.js"></script>
+<script type="text/javascript" src="../build/js/natalie.js"></script>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script type="text/javascript" src="qunit-2.15.0.js"></script>
+<script>
+
+  QUnit.module('add', function() {
+    QUnit.test('should add two numbers', function(assert) {
+      assert.equal(add(1, 1), 2);
+    });
+  });
+	
+	QUnit.module('calculateTargetCoordinates()', function() {
+    QUnit.test('test coordinates output', function(assert) {
+			var x = 6;
+			var y = 6;
+			var distance = 1;
+			var result = 0;
+      
+			/* test each angle from 0 to 330 on 30 degree increments*/
+			/* 0 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 0)
+			assert.equal(result[0], 7, "0 degree x, distance = 1");
+			assert.equal(result[1], 6, "0 degree y, distance = 1");
+			
+			/* 30 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 30)
+			assert.equal(result[0], 7, "30 degree x, distance = 1");
+			assert.equal(result[1], 6, "30 degree y, distance = 1");
+			
+			/* 60 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 60)
+			assert.equal(result[0], 7, "60 degree x, distance = 1");
+			assert.equal(result[1], 5, "60 degree y, distance = 1");
+			
+			/* 90 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 90)
+			assert.equal(result[0], 6, "90 degree x, distance = 1");
+			assert.equal(result[1], 5, "90 degree y, distance = 1");
+			
+			/* 120 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 120)
+			assert.equal(result[0], 6, "120 degree x, distance = 1");
+			assert.equal(result[1], 5, "120 degree y, distance = 1");
+			
+			/* 150 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 150)
+			assert.equal(result[0], 5, "150 degree x, distance = 1");
+			assert.equal(result[1], 6, "150 degree y, distance = 1");
+			
+			/* 180 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 180)
+			assert.equal(result[0], 5, "180 degree x, distance = 1");
+			assert.equal(result[1], 6, "180 degree y, distance = 1");
+			
+			/* 210 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 210)
+			assert.equal(result[0], 5, "210 degree x, distance = 1");
+			assert.equal(result[1], 7, "210 degree y, distance = 1");
+			
+			/* 240 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 240)
+			assert.equal(result[0], 6, "240 degree x, distance = 1");
+			assert.equal(result[1], 7, "240 degree y, distance = 1");
+			
+			/* 270 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 270)
+			assert.equal(result[0], 6, "270 degree x, distance = 1");
+			assert.equal(result[1], 7, "270 degree y, distance = 1");
+			
+			/* 300 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 300)
+			assert.equal(result[0], 7, "300 degree x, distance = 1");
+			assert.equal(result[1], 7, "300 degree y, distance = 1");
+			
+			/* 330 degrees with distance 1 */
+			result = calculateTargetCoordinates(x, y, distance, 330)
+			assert.equal(result[0], 7, "330 degree x, distance = 1");
+			assert.equal(result[1], 7, "330 degree y, distance = 1");
+			
+			/* switch distance to 10 and select different coordinates*/
+			x = 4;
+			y = 3;
+			distance = 10;
+			
+			/* 0 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 0)
+			assert.equal(result[0], 14, "0 degree x, distance = 10");
+			assert.equal(result[1], 3, "0 degree y, distance = 10");
+			
+			/* 30 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 30)
+			assert.equal(result[0], 13, "30 degree x, distance = 10");
+			assert.equal(result[1], -2, "30 degree y, distance = 10");
+			
+			/* 60 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 60)
+			assert.equal(result[0], 9, "60 degree x, distance = 10");
+			assert.equal(result[1], -6, "60 degree y, distance = 10");
+			
+			/* 90 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 90)
+			assert.equal(result[0], 4, "90 degree x, distance = 10");
+			assert.equal(result[1], -7, "90 degree y, distance = 10");
+			
+			/* 120 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 120)
+			assert.equal(result[0], -1, "120 degree x, distance = 10");
+			assert.equal(result[1], -6, "120 degree y, distance = 10");
+			
+			/* 150 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 150)
+			assert.equal(result[0], -5, "150 degree x, distance = 10");
+			assert.equal(result[1], -2, "150 degree y, distance = 10");
+			
+			/* 180 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 180)
+			assert.equal(result[0], -6, "180 degree x, distance = 10");
+			assert.equal(result[1], 3, "180 degree y, distance = 10");
+			
+			/* 210 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 210)
+			assert.equal(result[0], -5, "210 degree x, distance = 10");
+			assert.equal(result[1], 8, "210 degree y, distance = 10");
+			
+			/* 240 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 240)
+			assert.equal(result[0], -1, "240 degree x, distance = 10");
+			assert.equal(result[1], 12, "240 degree y, distance = 10");
+			
+			/* 270 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 270)
+			assert.equal(result[0], 4, "270 degree x, distance = 10");
+			assert.equal(result[1], 13, "270 degree y, distance = 10");
+			
+			/* 300 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 300)
+			assert.equal(result[0], 9, "300 degree x, distance = 10");
+			assert.equal(result[1], 12, "300 degree y, distance = 10");
+			
+			/* 330 degrees with distance 10 */
+			result = calculateTargetCoordinates(x, y, distance, 330)
+			assert.equal(result[0], 13, "330 degree x, distance = 10");
+			assert.equal(result[1], 8, "330 degree y, distance = 10");
+    });
+  });
+	
+	
+	QUnit.module('player.isShipDamaged()', function() {
+    QUnit.test('test if player ship is damaged', function(assert) {
+			player.damaged = true;
+      assert.ok(player.isShipDamaged(), true, "player ship should be damaged");
+			player.damaged = false;
+			assert.equal(player.isShipDamaged(), false, "player ship should not be damaged");
+    });
+  });
+	
+	QUnit.module('player.isEnergyEmpty()', function() {
+    QUnit.test('test if player ship is damaged', function(assert) {
+			player.energy = 0;
+      assert.equal(player.isEnergyEmpty(), true, "energy should be empty");
+			player.energy = -1;
+      assert.equal(player.isEnergyEmpty(), true, "energy should be empty");
+			player.energy = 1;
+      assert.equal(player.isEnergyEmpty(), false, "energy should not be empty");
+			
+    });
+  });	
+	
+	QUnit.module('player.increaseEnergy()', function() {
+    QUnit.test('test if player energy was increased', function(assert) {
+			player.energy = 100;
+      assert.equal(player.increaseEnergy(100), 0, "function should return 0");
+			assert.equal(player.increaseEnergy(0), 0, "function should return 0");
+			assert.equal(player.increaseEnergy(-1), -1, "energy should return error for negative entry");
+			assert.equal(player.energy, 200, "energy should be 200");
+    });
+  });	
+
+	QUnit.module('player.decreaseEnergy()', function() {
+    QUnit.test('test if player energy was decreased', function(assert) {
+			player.energy = 200;
+      assert.equal(player.decreaseEnergy(100), 0, "function should return 0");
+			assert.equal(player.decreaseEnergy(0), 0, "function should not return 0");
+			assert.equal(player.decreaseEnergy(-1), -1, "energy should return error for negative entry");
+			assert.equal(player.energy, 100, "energy should be 100");
+			assert.equal(player.decreaseEnergy(1000), 0, "function should return 0");
+			assert.equal(player.energy, 0, "energy should not drop below 0");
+    });
+  });		
+	
+	QUnit.module('player.setEnergy()', function() {
+    QUnit.test('test player set energy function', function(assert) {
+			player.energy = 200;
+      assert.equal(player.setEnergy(100), 100, "function should return 100");
+			assert.equal(player.energy, 100, "energy should equal 100");
+			assert.equal(player.setEnergy(-100), 0, "function should return 0, since energy cannot go negative");
+			assert.equal(player.energy, 0, "energy should equal 0");			
+			assert.equal(player.setEnergy(0), 0, "function should return 0");
+    });
+  });	
+
+	QUnit.module('calculateEnergyMovementCost()', function() {
+    QUnit.test('test energy movement cost', function(assert) {
+			assert.equal(calculateEnergyMovementCost(10), 100, "function should return 100");
+			assert.equal(calculateEnergyMovementCost(-10), -1, "function should return -1 since passed value is negative");
+			assert.equal(calculateEnergyMovementCost(0), 0, "function should return 0 since no movement costs 0 energy");
+    });
+  });  
+  
+  
+  /* player.js player tests */
+  QUnit.module('player.supplies', function() {
+    QUnit.test('test supplies setter and getter', function(assert) {
+			player._supplies = 300;  // set to 300 for test
+			assert.equal(player.supplies, 300, "should return 300");
+			player.supplies = 200;    // test setter by setting supplies to 200
+			assert.equal(player.supplies, 200, "should return 200");
+    });
+  });
+  
+  QUnit.module('player.energy', function() {
+    QUnit.test('test energy setter and getter', function(assert) {
+			player._energy = 300;  // set to 300 for test
+			assert.equal(player.energy, 300, "should return 300");
+			player.energy = 200;    // test setter by setting supplies to 200
+			assert.equal(player.energy, 200, "should return 200");
+    });
+  });
+
+  QUnit.module('player.dead', function() {
+    QUnit.test('test player dead when supplies < 1%', function(assert) {
+			player.supplies = 5;  // set supplies above 1%
+      
+			assert.equal(player.dead, false, "player should not be dead");
+			player.supplies = 0.05;    // test player should be dead
+			assert.equal(player.dead, true, "player should be dead");
+    });
+  });
+
+  /* test for game configuration */
+  var maxGameSize = {
+        value: 8
+    }
+  maxGameSize.value = 8;
+
+  QUnit.module('checkValidCP()', function() {
+    QUnit.test('test if coordinate is valid and exists', function(assert) {
+      assert.equal(checkValidCP(2,4), true, "return true");
+      assert.equal(checkValidCP(-1,4), false, "return false. CP < 0");
+      assert.equal(checkValidCP(8,3), false, "return false. CP outside map");
+    });
+  });
+	
+	
+	
+	
+	
+
+</script>
+</body>
