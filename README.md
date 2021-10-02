@@ -1,4 +1,4 @@
-#Portfolio
+## Portfolio
 A personal portfolio of projects made by Noah Funderburgh
 Some projects were group based and some where solo.
 ---
