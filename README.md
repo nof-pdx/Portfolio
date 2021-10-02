@@ -9,3 +9,6 @@ Some projects were group based and some where solo.
 
 ## Group Project
 *Space Hunt*: This was video game written by five other people including me.
+
+## Contact
+If you wish to contact me the best way is by phone.
