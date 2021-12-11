@@ -7,7 +7,7 @@ body{
   margin-top:2em;
   margin-bottom:2em;
   margin-right:6em;
-  background-image:url('https://media.istockphoto.com/photos/beautiful-sky-with-white-clouds-picture-id182412483?b=1&k=20&m=182412483&s=170667a&w=0&h=IirdBpxBNaXe0bwcNz7ruNbk1FL18IiTxZ6PCK44TOw=');
+  background-image:url('https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920');
   background-repeat:no-repeat;
   background-size:cover;
 }
@@ -64,7 +64,7 @@ h3{
 #myPicture{
   min-height: 289.6px;
   max-height: 289.6px;
-  width:20%;
+  width:16%;
   margin-right:4em;
 }
 
