@@ -1,0 +1,74 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin-top:2em;
+  margin-bottom:2em;
+  margin-right:6em;
+  background-image:url('https://media.istockphoto.com/photos/beautiful-sky-with-white-clouds-picture-id182412483?b=1&k=20&m=182412483&s=170667a&w=0&h=IirdBpxBNaXe0bwcNz7ruNbk1FL18IiTxZ6PCK44TOw=');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+main{
+  width:85%;
+  float:right;
+  background-color: white;
+  padding:2em;
+}
+
+h1{
+  background-color:#4c4c54;
+  color:white;
+  padding-top:2em;
+  padding-left:5em;
+  padding-bottom:2em;
+  font-family:Impact;
+  letter-spacing:.1em;
+  }
+
+h2{
+  background-color:#dedee0;
+  color:#4c4c54;
+  padding-top:2em;
+  padding-bottom:2em;
+  text-align:center;
+}
+
+h3{
+  padding: 1em 1em 1em 0;
+}
+
+.blue-text{
+  color:deepskyblue;
+}
+
+.bold-text{
+  font-weight: bold;
+}
+
+.float-left{
+  float:left;
+}
+
+.margin-top{
+  margin-top:1em;
+}
+
+.margin-right{
+  margin-right:7em;
+}
+
+#myPicture{
+  min-height: 289.6px;
+  max-height: 289.6px;
+  width:20%;
+  margin-right:4em;
+}
+
+#test{
+  margin-left:1em;
+  margin-top:1em;
+}
