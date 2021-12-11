@@ -1,0 +1,5 @@
+﻿  BinaryTree.cpp
+c:\users\apr services\source\repos\binarytree\binarytree\binarytree.cpp(7): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\apr services\source\repos\binarytree\binarytree\binarytree.h(154): warning C4715: 'binaryTree::Search': not all control paths return a value
+c:\users\apr services\source\repos\binarytree\binarytree\binarytree.h(297): warning C4715: 'binaryTree::buildTree': not all control paths return a value
+  BinaryTree.vcxproj -> C:\Users\APR Services\source\repos\BinaryTree\Debug\BinaryTree.exe

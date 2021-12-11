@@ -1,5 +1,0 @@
-﻿  BinaryTree.cpp
-c:\users\apr services\source\repos\cs project\cs project\binarytree.cpp(7): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\apr services\source\repos\cs project\cs project\binarytree.h(154): warning C4715: 'binaryTree::Search': not all control paths return a value
-c:\users\apr services\source\repos\cs project\cs project\binarytree.h(297): warning C4715: 'binaryTree::buildTree': not all control paths return a value
-  CS Project.vcxproj -> C:\Users\APR Services\source\repos\CS Project\Debug\CS Project.exe
