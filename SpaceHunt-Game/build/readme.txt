@@ -1,1 +1,0 @@
-Place index.html, styles.css, and script.js in this directory

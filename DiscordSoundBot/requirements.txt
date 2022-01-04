@@ -1,6 +1,0 @@
-SpeechRecognition
-pyttsx3
-youtube_dl
-pytz
-discord
-discord.py[voice]
